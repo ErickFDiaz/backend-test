@@ -1,5 +1,4 @@
 import { Schema, Types, model, Model, Document } from "mongoose";
-//import { User } from "../interfaces/user.interface";
 
 export type VehicleType = "official" | "resident" | "non-resident";
 

@@ -85,27 +85,4 @@ const processExitByVehicleType = async (vehicle: IVehicle, stay: IStay, duration
   }
 };
 
-
-// const getCars = async () => {
-//   const responseItem = await VehicleModel.find({});
-//   return responseItem;
-// };
-
-// const getCar = async (id: string) => {
-//   const responseItem = await VehicleModel.findOne({ _id: id });
-//   return responseItem;
-// };
-
-// const updateCar = async (id: string, data: Car) => {
-//   const responseItem = await VehicleModel.findOneAndUpdate({ _id: id }, data, {
-//     new: true,
-//   });
-//   return responseItem;
-// };
-
-// const deleteCar = async (id: string) => {
-//   const responseItem = await VehicleModel.remove({ _id: id });
-//   return responseItem;
-// };
-
 export { registerEntry, registerExit };

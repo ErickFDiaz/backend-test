@@ -9,8 +9,8 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/v1/',router);
 db()
-  .then(() => console.log("MongoDB Connected"))
+  .then(() => console.log("Connected to Database"))
   .catch((error) => {
-    console.error('MongoDB connection error:',error);
+    console.error('Database connection error:',error);
   });
 app.listen(PORT, () => console.log(`Listo por el puerto ${PORT}`));

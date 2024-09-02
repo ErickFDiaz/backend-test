@@ -1,7 +1,4 @@
-import { IVehicle } from "../models/vehicle.model";
 import VehicleModel from "../models/vehicle.model";
-import { IStay } from "../models/stay.model";
-import StayModel from "../models/stay.model";
 
 const getVehicles = async () => {
   const vehicles = await VehicleModel.find({});
@@ -36,21 +33,5 @@ const getCarBylicensePlate = async (licensePlate: string) => {
   return responseItem;
 };
 
-// const getCar = async (id: string) => {
-//   const responseItem = await VehicleModel.findOne({ _id: id });
-//   return responseItem;
-// };
-
-// const updateCar = async (id: string, data: Car) => {
-//   const responseItem = await VehicleModel.findOneAndUpdate({ _id: id }, data, {
-//     new: true,
-//   });
-//   return responseItem;
-// };
-
-// const deleteCar = async (id: string) => {
-//   const responseItem = await VehicleModel.remove({ _id: id });
-//   return responseItem;
-// };
 
 export { getVehicles, createOfficialVehicle, createResidentVehicle,getCarBylicensePlate };

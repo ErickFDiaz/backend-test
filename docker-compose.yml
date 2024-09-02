@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    image: erick-diaz/typescript-backend:latest
+    container_name: typescript-backend
+    ports:
+      - "7777:7777"
+    environment:
+      - PORT=7777
+      - MONGO_URI=mongodb://mongo:27017/api-rest-ts?authSource=admin
+    depends_on:
+      - mongo
+    networks:
+      - backend-network
+
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - backend-network
+
+volumes:
+  mongo-data:
+
+networks:
+  backend-network:
