@@ -8,7 +8,7 @@ services:
       - "7777:7777"
     environment:
       - PORT=7777
-      - MONGO_URI=mongodb://mongo:27017/api-rest-ts?authSource=admin
+      - DB_URI=mongodb://mongo:27017/api-rest-ts?authSource=admin
     depends_on:
       - mongo
     networks:
